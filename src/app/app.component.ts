@@ -2,13 +2,13 @@ import { Component, computed, signal } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { MatCheckbox } from "@angular/material/checkbox";
 import { HeaderComponent } from "../components/header/header.component";
-import {FooterComponent} from "../components/footer/footer.component";
+import { FooterComponent } from "../components/footer/footer.component";
+import { HomeComponent } from "../pages/home/home.component";
 
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import {HomeComponent} from "../pages/home/home.component";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 

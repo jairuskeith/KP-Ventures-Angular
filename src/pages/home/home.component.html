@@ -1,0 +1,13 @@
+<section>
+  <span class="checkbox-list-section">
+  <ul class="centered-list">
+    <li *ngFor="let checkbox of checkboxes; let i = index">
+      <mat-checkbox
+        [checked]="checkbox.checked"
+        (change)="update($event.checked, i)">
+        {{ checkbox.name }}
+      </mat-checkbox>
+    </li>
+  </ul>
+  </span>
+</section>

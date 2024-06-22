@@ -1,0 +1,12 @@
+.checkbox-list-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Adjust this if needed */
+}
+
+.centered-list {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+  text-align: center; /* Center align list items horizontally */
+}
