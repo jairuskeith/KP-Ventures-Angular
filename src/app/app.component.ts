@@ -8,6 +8,7 @@ import {FooterComponent} from "../components/footer/footer.component";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import {HomeComponent} from "../pages/home/home.component";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -32,7 +33,7 @@ const analytics = getAnalytics(app);
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatCheckbox, HeaderComponent, FooterComponent],
+  imports: [RouterOutlet, MatCheckbox, HeaderComponent, FooterComponent, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
