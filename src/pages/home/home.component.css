@@ -10,3 +10,28 @@
   padding: 0; /* Remove default padding */
   text-align: center; /* Center align list items horizontally */
 }
+
+/* Add this CSS to your styles.css or the component's CSS file */
+.custom-checkbox {
+  display: flex;
+  align-items: flex-start; /* Aligns the checkboxes at the start of each flex item */
+}
+
+.custom-checkbox .mat-checkbox-layout {
+  display: flex;
+  align-items: center; /* Aligns the checkbox icon and label text */
+}
+
+.word-wrap {
+  white-space: normal;  /* Allows the text to wrap */
+  margin-left: 8px;     /* Adds some space between the checkbox and the text */
+}
+
+.custom-checkbox .mat-checkbox-inner-container {
+  flex: 1; /* Allows the checkbox and label to expand within the container */
+}
+
+/* Add this CSS to your styles.css or the component's CSS file */
+.checkbox-section {
+  text-align: center; /* Center aligns the checkboxes within the section */
+}

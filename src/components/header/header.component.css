@@ -2,3 +2,9 @@ mat-toolbar {
   color: white;
   background-color: black;
 }
+
+/*.sticky-toolbar {*/
+/*  position: sticky;*/
+/*  top: 0;*/
+/*  z-index: 1000; !* Adjust the z-index as needed *!*/
+/*}*/

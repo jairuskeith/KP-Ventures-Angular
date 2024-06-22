@@ -1,13 +1,86 @@
-<section>
-  <span class="checkbox-list-section">
-  <ul class="centered-list">
-    <li *ngFor="let checkbox of checkboxes; let i = index">
-      <mat-checkbox
-        [checked]="checkbox.checked"
-        (change)="update($event.checked, i)">
-        {{ checkbox.name }}
-      </mat-checkbox>
-    </li>
-  </ul>
-  </span>
+<section class="centered-list">
+  <h4>Individual Income Tax Quote</h4>
 </section>
+
+<form (ngSubmit)="onSubmit()">
+
+  <section>
+    <ul
+      *ngFor="let checkBoxSection of checkBoxSections; let i = index"
+      class="centered-list">
+
+      <li>
+        <h6>
+          {{checkBoxSection.header}}
+        </h6>
+      </li>
+
+      <li *ngFor="let checkbox of checkBoxSection.checkBoxes; let i = index">
+        <mat-checkbox
+          class="custom-checkbox"
+          [checked]="checkbox.checked"
+          (change)="update($event, i)">
+          <span class="word-wrap">{{ checkbox.label }}</span>
+        </mat-checkbox>
+
+        <mat-form-field *ngIf="checkbox.checked && checkbox?.input != undefined">
+          <mat-label>{{ checkbox.input }}</mat-label>
+          <input
+            [value]="1"
+            matInput>
+        </mat-form-field>
+
+      </li>
+
+    </ul>
+  </section>
+
+  <section class="centered-list">
+    <button
+      style="margin-bottom: 50vh"
+      mat-stroked-button>Submit</button>
+  </section>
+
+</form>
+
+
+<!--<ol>-->
+<!--  <li>-->
+<!--    <mat-form-field>-->
+<!--      <mat-label>What's your name?</mat-label>-->
+<!--      <input matInput [(ngModel)]="name" />-->
+<!--    </mat-form-field>-->
+<!--  </li>-->
+<!--  <li>-->
+<!--    <button-->
+<!--      mat-raised-button-->
+<!--      (click)="openDialog()">-->
+<!--      Pick one-->
+<!--    </button>-->
+<!--  </li>-->
+<!--  @if (animal()) {-->
+<!--    <li>-->
+<!--      You chose: <em>{{animal()}}</em>-->
+<!--    </li>-->
+<!--  }-->
+<!--</ol>-->
+
+
+
+<!--  <section>-->
+<!--    <div class="example-label">Stroked</div>-->
+<!--    <div class="example-button-row">-->
+<!--      <button mat-stroked-button>Basic</button>-->
+<!--      <button mat-stroked-button disabled>Disabled</button>-->
+<!--      <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>-->
+<!--    </div>-->
+<!--  </section>-->
+<!--  <mat-divider />-->
+<!--  <section>-->
+<!--    <div class="example-label">Flat</div>-->
+<!--    <div class="example-button-row">-->
+<!--      <button mat-flat-button>Basic</button>-->
+<!--      <button mat-flat-button disabled>Disabled</button>-->
+<!--      <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>-->
+<!--    </div>-->
+<!--  </section>-->
